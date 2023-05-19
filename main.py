@@ -56,8 +56,6 @@ def morse_translation(word_to_translate):
         if element in MORSE_CODE:
             element_morse = MORSE_CODE[element]
             input_translated += element_morse + " "
-
-            # Display translation to user
             message = f"{user_input} translated into morse code is {input_translated}\n"
         else:
             message = "Please don't use special characters. Only letters, numbers and normal characters of sentences are allowed.\n"
@@ -86,6 +84,7 @@ while running:
 
     # Translate user input if any exists
     if user_input:
+        # Display translation to user
         print(morse_translation(user_input))
     else:
         print("This is no valid input.")
